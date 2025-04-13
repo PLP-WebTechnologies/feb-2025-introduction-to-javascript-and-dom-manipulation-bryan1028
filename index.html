@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Let's play around with DOM</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+            background-color: yellow;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hmm, i'm still workshopping the title.</h1>
+    
+    <p id="text-to-change">I am the original</p>
+    
+    <button id="change-text-btn">Change Text</button>
+    <button id="change-style-btn">Change Style</button>
+    <button id="toggle-element-btn">Toggle Element</button>
+    
+    <div id="element-to-toggle">You found me, hihihi!</div>
+
+    <script>
+        // Change Text Button
+        document.getElementById('change-text-btn').addEventListener('click', function() {
+            document.getElementById('text-to-change').textContent = "This feels different!";
+        });
+        
+        // Change Style Button
+        document.getElementById('change-style-btn').addEventListener('click', function() {
+            document.getElementById('text-to-change').classList.toggle('highlight');
+        });
+        
+        // Toggle Element Button
+        document.getElementById('toggle-element-btn').addEventListener('click', function() {
+            document.getElementById('element-to-toggle').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
